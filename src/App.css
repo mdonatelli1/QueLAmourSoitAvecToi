@@ -10,12 +10,16 @@
 }
 
 * {
-  font-size: bold;
+  font-weight: bold;
 }
 
 .container {
   background-color: #131313;
   color: #eeeeee;
+
+  padding: 5px;
+  text-align: center;
+  width: fit-content;
 }
 
 button {
@@ -27,7 +31,8 @@ button {
   padding: 6px 16px;
 }
 
-button:hover {
+button:hover,
+h1 {
   color: #eeeeee;
 }
 
