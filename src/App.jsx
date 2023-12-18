@@ -1,10 +1,10 @@
 import './App.css'
-import PartnerResult from './pages/PartnerResult.jsx'
+import Date from './pages/Date.jsx'
 
 function App() {
   return (
     <>
-      <PartnerResult />
+      <Date />
     </>
   )
 }
