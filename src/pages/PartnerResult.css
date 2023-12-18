@@ -1,0 +1,22 @@
+#partner-result {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#match {
+    display: flex;
+    align-items: center;
+}
+
+#heart {
+    height: 128px;
+    width: 128px;
+    margin: 0 56px;
+}

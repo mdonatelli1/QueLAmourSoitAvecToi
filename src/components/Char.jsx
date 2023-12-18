@@ -1,3 +1,4 @@
+import '../App.css'
 import './Char.css'
 
 function Char ({char}) {
