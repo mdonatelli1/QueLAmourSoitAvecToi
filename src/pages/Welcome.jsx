@@ -1,3 +1,4 @@
+import '../App.css'
 import './Welcome.css'
 
 function Welcome () {

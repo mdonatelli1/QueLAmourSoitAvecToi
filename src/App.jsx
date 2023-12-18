@@ -1,10 +1,10 @@
 import './App.css'
-import CharResult from './pages/CharResult.jsx'
+import PartnerResult from './pages/PartnerResult.jsx'
 
 function App() {
   return (
     <>
-      <CharResult />
+      <PartnerResult />
     </>
   )
 }
