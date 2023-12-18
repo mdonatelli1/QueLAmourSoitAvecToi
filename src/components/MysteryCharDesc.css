@@ -1,0 +1,9 @@
+.char-desc {
+  padding: 1rem;
+  width: 25%;
+  color: #eeeeee;
+}
+
+.char-desc:hover {
+  color: #adadad;
+}

@@ -5,6 +5,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
+
+  box-sizing: border-box;
 }
 
 * {
@@ -13,7 +15,7 @@
 
 .container {
   background-color: #131313;
-  color: #EEEEEE;
+  color: #eeeeee;
 
   padding: 5px;
   text-align: center;
@@ -29,11 +31,13 @@ button {
   padding: 6px 16px;
 }
 
-button:hover, h1 {
-  color: #EEEEEE;
+button:hover,
+h1 {
+  color: #eeeeee;
 }
 
-button, h1 {
+button,
+h1 {
   font-size: 1.5rem;
 }
 
