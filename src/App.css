@@ -6,3 +6,33 @@
   height: 100%;
   width: 100%;
 }
+
+* {
+  font-size: bold;
+}
+
+.container {
+  background-color: #131313;
+  color: #EEEEEE;
+}
+
+button {
+  background-color: #131313;
+  color: #adadad;
+
+  border: none;
+
+  padding: 6px 16px;
+}
+
+button:hover {
+  color: #EEEEEE;
+}
+
+button, h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
