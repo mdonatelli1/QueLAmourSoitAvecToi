@@ -7,7 +7,7 @@ import "./CharChoice.css"
 function CharChoice() {
     return (
     <div className="char-choice">
-        <h2>Sélectionne ton personnage</h2>
+        <h1>Sélectionne ton personnage</h1>
         <div className="mystery-char-wrapper">
             <Char char={charList[6]}/>
         </div>
