@@ -1,0 +1,16 @@
+.mystery-container {
+  border: 1px solid red;
+  width: 19rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  background-color: #474747;
+}
+
+.mystery-qm {
+  color: white;
+}
+
+.mystery-p {
+  color: #252525;
+}
