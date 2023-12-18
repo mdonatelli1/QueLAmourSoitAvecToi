@@ -1,11 +1,10 @@
 import './App.css'
-import charList from './data.js'
-import Welcome from './pages/Welcome.jsx'
+import CharResult from './pages/CharResult.jsx'
 
 function App() {
   return (
     <>
-      <Welcome />
+      <CharResult />
     </>
   )
 }
