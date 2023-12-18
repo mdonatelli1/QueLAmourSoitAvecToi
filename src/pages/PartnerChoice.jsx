@@ -1,21 +1,69 @@
-import {Link, Outlet } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-const mysterychar = () => {
+function mysterychar() {
   return (
-    <>
-    <Link to="/"></Link>
-    </>
+    <div>
+      <h1>Partener Mystère</h1>
+      <Link to="./components/MysteryChar"></Link>
+    </div>
+    
+  );
+}
+
+
+
+
+
+
+function result(){
+
+}
+
+function result1() {
+  return (
+    <div>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
   )
-};
+}
 
-export default Home;
+function result2() {
+  return (
+    <div>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+  )
+}
+
+function result3() {
+  return (
+    <div>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+  )
+}
+
+function result4() {
+  return (
+    <div>
+      <button></button>
+      <button></button>
+      <button></button>
+    </div>
+  )
+}
 
 
+export default PartnerChoice;
 
 
-
-<div>
-    <button>Answer 1</button>
-    <button>Answer 2</button>
-    <button>Answer 3</button>
-</div>
+// Question 1 : 
+// Question 2 : Avez-vous une préférence pour sa couleur de cheuveux ? 
+// Question 3 : Et pour ces yeux ? 
+// Question 4 :
