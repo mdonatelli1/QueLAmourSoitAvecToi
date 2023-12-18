@@ -1,16 +1,23 @@
-import MysteryChar from "../components/MysteryChar";
+import charList from '../data.js'
+import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
+import Char from "../components/Char";
+
+import "./CharChoice.css"
 
 function CharChoice() {
     return (
-    <div className="CharChoice">
+    <div className="char-choice">
         <h2>Sélectionne ton personnage</h2>
-        <MysteryChar />
-        <div className="charChoice-container">
-            <p className="char-description">je suis MysteryCharDescr</p>
-            <p className="char-description">je suis perso2</p>
-            <p className="char-description">je suis perso3</p>
+        <div className="mystery-char-wrapper">
+            <Char char={charList[6]}/>
+        </div>
+        <div className="char-choice-container">
+            {charList.map((char) => (
+                char.desc !== undefined && <MysteryCharDesc charDesc={char.desc} key={char.id}/>
+                ))}
         </div>
     </div>
     )
   }
+
   export default CharChoice;

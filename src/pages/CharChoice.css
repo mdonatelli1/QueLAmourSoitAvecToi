@@ -1,0 +1,18 @@
+.char-choice h2 {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mystery-char-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.char-choice-container {
+  margin: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

@@ -5,6 +5,8 @@
   position: absolute;
   height: 100%;
   width: 100%;
+
+  box-sizing: border-box;
 }
 
 * {
@@ -13,7 +15,7 @@
 
 .container {
   background-color: #131313;
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 
 button {
@@ -26,10 +28,11 @@ button {
 }
 
 button:hover {
-  color: #EEEEEE;
+  color: #eeeeee;
 }
 
-button, h1 {
+button,
+h1 {
   font-size: 1.5rem;
 }
 

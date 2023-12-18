@@ -35,6 +35,12 @@ const charList = [
     datePlace: "src/assets/leia-date.png",
     id: 6,
   },
+  {
+    name: "Personnage mystère",
+    imageSRC: "src/assets/mystere.png",
+    datePlace: "",
+    id: 7,
+  },
 ];
 
 export default charList;
