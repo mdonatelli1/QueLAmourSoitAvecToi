@@ -1,12 +1,12 @@
-//import './Date.css';
 import '../App.css';
-// import Char from '../components/Char.jsx';
-// import CharList from '../data.js';
-import '../components/Char.css';
 import MysteryChar from '../components/MysteryChar.jsx';
 import { useState, useEffect } from 'react';
+import './PartnerChoice.css';
+import PartnerResult from './PartnerResult.jsx';
+import charList from '../data.js'
 
-  function partnerChoix () {
+  function PartnerChoice ({char}) {
+    const[partner, setPartner] = useState(undefined);
     const[charactersInfos, setApiData] = useState([]);
     useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
@@ -60,48 +60,47 @@ import { useState, useEffect } from 'react';
     };
 
     const handleNext = () => {
-      switch (selectedOption) {
-        case 'option1':
-          setPointsOption1(pointsOption1 + 1);
-          break;
-        case 'option2':
-          setPointsOption2(pointsOption2 + 1);
-          break;
-        case 'option3':
-          setPointsOption3(pointsOption3 + 1);
-          break;
-        default:
-          break;
+      if (currentQuestion == questionsData.length-1){
+        if (pointsOption1 > pointsOption2 && pointsOption1 > pointsOption3) {
+          setPartner(charList[3]);
+        } else if (pointsOption2 > pointsOption1 && pointsOption2 > pointsOption3) {
+          setPartner(charList[5]);
+        } else if (pointsOption3 > pointsOption1 && pointsOption3 > pointsOption2) {
+          setPartner(charList[4]);
+        } else {
+          setPartner(charList[6]);
+        }
       }
-
+      else{
+        switch (selectedOption) {
+          case 'option1':
+            setPointsOption1(pointsOption1 + 1);
+            break;
+          case 'option2':
+            setPointsOption2(pointsOption2 + 1);
+            break;
+          case 'option3':
+            setPointsOption3(pointsOption3 + 1);
+            break;
+          default:
+            break;
+      }
       setCurrentQuestion(currentQuestion + 1);
       setSelectedOption(null);
+    }
+      
     };
 
     const handlePrevious = () => {
       setCurrentQuestion(currentQuestion - 1);
       setSelectedOption(null);
     };
-
-    const showResult = () => {
-      let result;
-      if (pointsOption1 > pointsOption2 && pointsOption1 > pointsOption3) {
-        result = 'Option 1 wins!';
-      } else if (pointsOption2 > pointsOption1 && pointsOption2 > pointsOption3) {
-        result = 'Option 2 wins!';
-      } else if (pointsOption3 > pointsOption1 && pointsOption3 > pointsOption2) {
-        result = 'Option 3 wins!';
-      } else {
-        result = 'It\'s a tie!';
-      }
-
-      return result;
-    };
-
     
 
     return (
-      <div>
+      <>
+      {currentQuestion < questionsData.length ? (
+      <section id='partner-choice'>
         <div id="date">
           <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet"></link>
           <div id='question'>
@@ -109,8 +108,7 @@ import { useState, useEffect } from 'react';
           </div>
         </div>
         <div>
-          <h1>Questionnaire</h1>
-          {currentQuestion < questionsData.length ? (
+          
             <div>
               <h2>{questionsData[currentQuestion].question}</h2>
               <ul>
@@ -135,16 +133,13 @@ import { useState, useEffect } from 'react';
                 Suivant
               </button>
             </div>
-          ) : (
-            <div>
-              <h2>Résultat</h2>
-              <p>{showResult()}</p>
-            </div>
-          )}
         </div>
-      </div>
+      </section>
+        ) : (
+          <PartnerResult partner={partner} char={char}/>
+        )}
+      </>
     );
-    
 }
 
-export default partnerChoix;
+export default PartnerChoice;

@@ -1,4 +1,6 @@
+import '../App.css'
 import './MysteryChar.css';
+
 import mysteryImage from "./mystere.png";
 function MysteryChar() {
     return (
