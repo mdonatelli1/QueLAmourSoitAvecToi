@@ -1,8 +1,12 @@
+import './MysteryChar.css';
+import mysteryImage from "./mystere.png";
 function MysteryChar() {
     return (
-      <div>
-        <h1>Partenaire Mystère</h1>
-        <img src={"./img.jpg"} alt="Mystery Character" />
+      <div className="mystery-char-container">
+        <div className="mystery">
+          <img className="mystery-char-image" src={mysteryImage} alt="Mystery Character" />
+          <h1>Partner mystère</h1>
+        </div>
       </div>
     );
   }
