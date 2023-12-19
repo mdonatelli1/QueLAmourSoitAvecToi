@@ -1,18 +1,37 @@
+import { useEffect } from 'react';
+import { useState } from 'react';
+
+import Char from '../components/Char.jsx'
+import Date from './Date.jsx';
+
 import '../App.css'
 import './PartnerResult.css'
-import Char from '../components/Char.jsx'
-import charList from '../data';
 
-function PartnerResult () {
+function PartnerResult ({char, partner}) {
+    const [active, setActive] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setActive(true);
+        }, 5000)
+    }, [])
+
     return (
-        <section id="partner-result">
-            <h1>Match !</h1>
-            <div id='match'>
-                <Char char={charList[1]}/>
-                <img id='heart' src="src\assets/heart.png" alt="" />
-                <Char char={charList[5]}/>
-            </div>
-        </section>
+        <>
+        {active ? (
+            <Date partner={partner}/>
+        ) : (
+            <section id="partner-result">
+                <h1>Match !</h1>
+                <div id='match'>
+                    <Char char={char}/>
+                    <img id='heart' src="src\assets/heart.png" alt="" />
+                    <Char char={partner}/>
+                </div>
+            </section>
+        )
+        }
+        </>
     )
 }
 

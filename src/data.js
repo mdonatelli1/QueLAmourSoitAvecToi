@@ -34,6 +34,23 @@ const charList = [
     imageSRC: "src/assets/princess-leia.png",
     datePlace: "src/assets/leia-date.png",
     id: 6,
+    questions: [
+      {
+        question: "Si tu avais accès à une technologie avancée comme le sabre laser, comment l'utiliserais-tu pour le bien de tous ?",
+        answerGood: "Je l'utiliserais pour protéger et défendre ceux qui en ont besoin, pour apporter la paix et la justice dans l'univers. Je ne l'utiliserais jamais pour nuire à autrui.",
+        answerBad: "Je l'utiliserais pour mes propres intérêts, pour obtenir du pouvoir et manipuler les gens. Je crois que la fin justifie les moyens.", 
+      },
+      {
+        question: "Si tu avais la possibilité de changer le cours de l'histoire galactique, quelle action importante entreprendrais-tu ?",
+        answerGood: "Je m'efforcerais de mettre fin aux conflits et de rétablir l'équilibre dans la galaxie. Je chercherais à unir les peuples plutôt qu'à les diviser.",
+        answerBad: "Je profiterais de la situation pour me positionner en tant que leader incontesté, peu importe les conséquences pour les autres. Le pouvoir absolu serait mon objectif principal.",
+      },
+      {
+        question: "Comment vois-tu la notion de sacrifice pour une cause qui te tient à cœur ?",
+        answerGood: "Je suis prêt à sacrifier mes propres intérêts et même ma propre sécurité pour défendre ce en quoi je crois. Le bien-être de tous prime sur le mien.",
+        answerBad: "Je ne suis pas prêt à faire de sacrifices personnels, je préfère privilégier mes propres intérêts et éviter tout risque pour moi-même, peu importe la cause."
+      }
+    ]
   },
   {
     name: "Personnage mystère",

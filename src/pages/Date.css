@@ -13,10 +13,18 @@
     background-size: cover;
 }
 
+#question .profile {
+    margin: 0 auto;
+}
+
 #question p.container {
     margin: 1rem auto;
 }
 
+#reponse {
+    text-align: center;
+}
+
 #reponse button {
-    margin: 0 8px;
+    margin: 1rem 8px;
 }
