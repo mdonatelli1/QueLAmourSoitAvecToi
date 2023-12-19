@@ -9,11 +9,14 @@ main {
     justify-content: center;
     background-image: url(/src/assets/background2.png);
     background-size: cover;
+    transform: scale(1.1);
+    transform-origin: center;
     font-size: 1rem;
     min-height: 100vh;
 
 }
 #final_result {
+
     display: flex;
     flex-direction: column;
     align-items: center;
