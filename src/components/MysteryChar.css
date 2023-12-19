@@ -1,1 +1,25 @@
+.mystery-char-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+}
+  
+.mystery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: 10px;
+  font-size: 0.5rem;
+}
 
+.mystery-char-image {
+  width: 150px; 
+  height: 150px; 
+  padding: 50px;
+  background-color: rgb(90, 85, 85);
+  margin-top: 10px;
+}
+  
+.mystery-char-text {
+  margin-block: 10px;
+}
