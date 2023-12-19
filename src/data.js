@@ -22,12 +22,63 @@ const charList = [
     imageSRC: "src/assets/dark-vador.png",
     datePlace: "src/assets/dark-vador-date.jpg",
     id: 4,
+    questions: [
+      {
+        question:
+          "Si tu avais des pouvoirs de la Force, comment les utiliserais-tu pour atteindre tes objectifs et dominer la galaxie ?",
+        answerGood:
+          "Je me servirais de mes pouvoirs pour instaurer l'ordre et la discipline, éliminant toute résistance sur mon chemin. Mon but serait d'apporter une stabilité absolue à la galaxie, sous mon commandement.",
+        answerBad:
+          "Eh bien, je pense que je les utiliserai pour des tours de magie amusants lors des fêtes. Imaginez faire léviter des verres de vin, ce serait un spectacle génial, non ?",
+      },
+      {
+        question:
+          " Si tu découvrais qu'un proche était en train de comploter contre l'Empire, que ferais-tu ?",
+        answerGood:
+          "Je l'éliminerais sans hésitation. La loyauté envers l'Empire est primordiale, et toute trahison doit être éradiquée. Rien ne peut menacer l'ordre que j'essaie d'établir.",
+        answerBad:
+          "Je tenterais probablement une intervention de médiation. Peut-être que je pourrais les convaincre de changer d'avis plutôt que de recourir à des mesures drastiques. La paix et l'amour, vous savez ?",
+      },
+      {
+        question:
+          "Si tu devais conquérir une planète pour en faire ton propre royaume, laquelle choisirais-tu et comment gouvernerais-tu ?",
+        answerGood:
+          "Je choisirais Coruscant, le cœur de la galaxie, et je gouvernerais avec une main de fer. Ma domination serait totale, et toute opposition serait impitoyablement écrasée.",
+        answerBad:
+          "Je pense que je prendrais une planète plus tranquille, peut-être Endor. J'encouragerais la paix, la coexistence et la protection de l'environnement. Un peu comme un havre de vacances galactique, non ?",
+      },
+    ],
   },
   {
     name: "R2D2",
     imageSRC: "src/assets/r2d2.png",
     datePlace: "src/assets/r2d2-date.png",
     id: 5,
+    questions: [
+      {
+        question:
+          "Comment exprimerais-tu ton affection à travers des séquences de 0 et de 1 ?",
+        answerGood:
+          "01001001 01101110 01110111 01101111 01110010 01101011 01101100 01101001 01101110 01101110 01101111 01110101 01110010 (Traduction : Je trouverais un moyen de te montrer mon amour à travers des séquences binaires uniques).",
+        answerBad:
+          "Bleep bloop bleep beep beep. Bleep bleep bloop bloop ? (Traduction : Je ne suis pas vraiment intéressé par des signaux binaires. On peut simplement s'aimer sans codes, non ?)",
+      },
+      {
+        question:
+          " Si nous devions voyager ensemble à travers la galaxie, quel endroit choisirais-tu ?",
+        answerGood:
+          "01100011 01101111 01101110 01110100 01110010 01101111 01101100 01100101 01110010 01101100 01101111 01101101 01110010 01101111 01101101 (Traduction : Contrôle central d'Orléans).",
+        answerBad:
+          "01001001 01101110 01100111 01101111 01101101 01101110 01101011 01110011 01110011 01101111 01101110 01101110 01101110 01101111 01110101 01110110 01101111 01111001 01100001 01101110 (Traduction : Ingomnkssonnouvoyanan - Réponse incompréhensible).",
+      },
+      {
+        question: "Quelle est ton opinion sur les Ewoks ?",
+        answerGood:
+          "01001001 01101100 01110011 01110011 01101111 01101110 01110100 01110010 01101111 01110101 01101110 01101110 01101111 01110101 01101111 01111011 01110011 01110011 (Traduction : Ils sont mignons et bien intentionnés).",
+        answerBad:
+          "01001001 01101100 01110011 01110011 01101111 01101110 01110100 01110011 01110010 01101111 01110101 01101110 01101110 01101111 01110101 01111011 (Traduction : Ils sont trop bruyants et peu utiles).",
+      },
+    ],
   },
   {
     name: "Princess Leia",
@@ -36,21 +87,30 @@ const charList = [
     id: 6,
     questions: [
       {
-        question: "Si tu avais accès à une technologie avancée comme le sabre laser, comment l'utiliserais-tu pour le bien de tous ?",
-        answerGood: "Je l'utiliserais pour protéger et défendre ceux qui en ont besoin, pour apporter la paix et la justice dans l'univers. Je ne l'utiliserais jamais pour nuire à autrui.",
-        answerBad: "Je l'utiliserais pour mes propres intérêts, pour obtenir du pouvoir et manipuler les gens. Je crois que la fin justifie les moyens.", 
+        question:
+          "Si tu étais un Jedi, comment utiliserais-tu la Force pour aider les autres et maintenir la paix dans la galaxie ?",
+        answerGood:
+          "Je crois en l'équilibre et en la justice. J'utiliserais la Force pour protéger les innocents, défendre les opprimés et œuvrer en faveur de la paix. Tout comme vous, Princesse Leia.",
+        answerBad:
+          "Eh bien, je pense que je ferais de la Force un excellent outil pour attraper la télécommande quand je suis trop paresseux pour me lever. La paix dans la galaxie peut attendre, non ?",
       },
       {
-        question: "Si tu avais la possibilité de changer le cours de l'histoire galactique, quelle action importante entreprendrais-tu ?",
-        answerGood: "Je m'efforcerais de mettre fin aux conflits et de rétablir l'équilibre dans la galaxie. Je chercherais à unir les peuples plutôt qu'à les diviser.",
-        answerBad: "Je profiterais de la situation pour me positionner en tant que leader incontesté, peu importe les conséquences pour les autres. Le pouvoir absolu serait mon objectif principal.",
+        question:
+          "Si tu devais choisir un rôle dans l'Alliance Rebelle, que choisiras-tu et pourquoi ?",
+        answerGood:
+          "Je rejoindrais les pilotes de l'escadron rebelle. La liberté et la lutte contre l'oppression sont des valeurs qui me tiennent à cœur, et je serais prêt à risquer ma vie pour la cause de l'Alliance.",
+        answerBad:
+          "Je suis plus un planificateur stratégique depuis mon fauteuil. Les pilotes rebelle peuvent se débrouiller seuls. J'ai des talents plus, euh, administratifs.",
       },
       {
-        question: "Comment vois-tu la notion de sacrifice pour une cause qui te tient à cœur ?",
-        answerGood: "Je suis prêt à sacrifier mes propres intérêts et même ma propre sécurité pour défendre ce en quoi je crois. Le bien-être de tous prime sur le mien.",
-        answerBad: "Je ne suis pas prêt à faire de sacrifices personnels, je préfère privilégier mes propres intérêts et éviter tout risque pour moi-même, peu importe la cause."
-      }
-    ]
+        question:
+          "Si tu découvrais que tu as une connexion familiale avec l'Empire, comment réagirais-tu? Jusqu'où irais-tu pour défendre la vérité et la loyauté envers ceux que tu aimes ?",
+        answerGood:
+          "Peu importe mes liens familiaux, je resterais fidèle à mes convictions. La vérité et la loyauté envers la justice sont plus importantes que les liens du sang. Je ferais tout pour soutenir la cause juste.",
+        answerBad:
+          "Eh bien, peut-être que je jetterais quelques piques sarcastiques à ma famille impériale lors des réunions de famille. Rien de sérieux, juste pour les embêter un peu. La loyauté a ses limites, non ?",
+      },
+    ],
   },
   {
     name: "Personnage mystère",
