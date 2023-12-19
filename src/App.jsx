@@ -1,10 +1,12 @@
 import './App.css'
-import Date from './pages/Date.jsx'
+import charList from './data.js'
+import FinalResultSuccess from './pages/FinalResultSuccess.jsx'
+
 
 function App() {
   return (
     <>
-      <Date />
+      <FinalResultSuccess />
     </>
   )
 }
