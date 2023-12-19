@@ -13,10 +13,12 @@
     background-image: url("../assets/background2.png");
     background-size: cover;
 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .quests {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     background-color: rgba(0, 0, 0, 0.7);
     color: white;
     padding: 10px;
@@ -30,7 +32,7 @@
     justify-content: space-around;
     list-style: none;
     cursor: pointer;
-    gap: 25px;
+    gap: 40px;
 }
 
 .answer-next {
@@ -43,7 +45,7 @@
 .button-next {
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 80px;
     cursor: pointer;
 }
 
