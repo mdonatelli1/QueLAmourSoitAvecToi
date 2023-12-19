@@ -1,8 +1,8 @@
 import "./MysteryCharDesc.css"
 
-function MysteryCharDesc({ charDesc }) {
+function MysteryCharDesc({ charDesc, handleClick }) {
     return (
-        <p className="char-desc container">{charDesc}</p>
+        <p className="char-desc container" onClick={handleClick}>{charDesc}</p>
     )
 }
 
