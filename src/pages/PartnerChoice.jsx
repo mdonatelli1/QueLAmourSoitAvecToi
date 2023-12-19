@@ -60,7 +60,8 @@ import charList from '../data.js'
     };
 
     const handleNext = () => {
-      if (currentQuestion == questionsData.length-1){
+      setCurrentQuestion(currentQuestion + 1);
+      if (currentQuestion === questionsData.length - 1){
         if (pointsOption1 > pointsOption2 && pointsOption1 > pointsOption3) {
           setPartner(charList[3]);
         } else if (pointsOption2 > pointsOption1 && pointsOption2 > pointsOption3) {
@@ -84,10 +85,9 @@ import charList from '../data.js'
             break;
           default:
             break;
+        }
+        setSelectedOption(null);
       }
-      setCurrentQuestion(currentQuestion + 1);
-      setSelectedOption(null);
-    }
       
     };
 
@@ -99,40 +99,34 @@ import charList from '../data.js'
 
     return (
       <>
-      {currentQuestion < questionsData.length ? (
+      {currentQuestion <= questionsData.length - 1 ? (
       <section id='partner-choice'>
-        <div id="date">
-          <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet"></link>
-          <div id='question'>
-            <MysteryChar/>
-          </div>
-        </div>
+        <MysteryChar />
         <div>
-          
-            <div>
-              <h2>{questionsData[currentQuestion].question}</h2>
-              <ul>
-                {questionsData[currentQuestion].options.map((option, index) => (
-                  <li key={option.id}>
-                    <label>
-                      <input
-                        type="radio"
-                        value={option.id}
-                        checked={selectedOption === option.id}
-                        onChange={() => handleOptionSelect(option.id)}
-                      />
-                      {option.text}
-                    </label>
-                  </li>
-                ))}
-              </ul>
-              <button onClick={handlePrevious} disabled={currentQuestion === 0}>
-                Précédent
-              </button>
-              <button onClick={handleNext} disabled={selectedOption === null}>
-                Suivant
-              </button>
-            </div>
+          <div>
+            <h2>{questionsData[currentQuestion].question}</h2>
+            <ul>
+              {questionsData[currentQuestion].options.map((option, index) => (
+                <li key={option.id}>
+                  <label>
+                    <input
+                      type="radio"
+                      value={option.id}
+                      checked={selectedOption === option.id}
+                      onChange={() => handleOptionSelect(option.id)}
+                    />
+                    {option.text}
+                  </label>
+                </li>
+              ))}
+            </ul>
+            <button onClick={handlePrevious} disabled={currentQuestion === 0}>
+              Précédent
+            </button>
+            <button onClick={handleNext} disabled={selectedOption === null}>
+              Suivant
+            </button>
+          </div>
         </div>
       </section>
         ) : (

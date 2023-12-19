@@ -1,10 +1,10 @@
 import './App.css'
-import PartnerChoice from './pages/PartnerChoice.jsx'
+import Welcome from './pages/Welcome.jsx'
 
 function App() {
   return (
     <>
-      <PartnerChoice/>
+      <Welcome/>
     </>
   )
 }
