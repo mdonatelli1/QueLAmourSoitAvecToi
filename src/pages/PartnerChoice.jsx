@@ -30,7 +30,7 @@ import charList from '../data.js'
         ],
       },
       {
-        question: 'Couleur préféré ?',
+        question: 'As-tu une préférence pour sa couleur des yeux ?',
         options: [
           { class: 'option1', text: 'Bleu' },
           { class: 'option2', text: 'Rouge' },
@@ -38,7 +38,7 @@ import charList from '../data.js'
         ],
       },
       {
-        question: 'Taille ?',
+        question: 'Et pour sa taille ?',
         options: [
           { class: 'option1', text: '3' },
           { class: 'option2', text: '4' },
