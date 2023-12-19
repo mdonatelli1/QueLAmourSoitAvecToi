@@ -1,8 +1,8 @@
 import CharList from '../data.js'
 
-function Answer ({answer, points, setPoints, lvl, setLvl}) {
+function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	const handleClick = () => {
-		answer === CharList[5].questions[lvl].answerGood && setPoints(points + 1);
+		answer === partner.questions[lvl].answerGood && setPoints(points + 1);
 		setLvl(lvl + 1);
 	}
 
