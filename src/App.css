@@ -5,4 +5,42 @@
   position: absolute;
   height: 100%;
   width: 100%;
+
+  box-sizing: border-box;
+}
+
+* {
+  font-weight: bold;
+}
+
+.container {
+  background-color: #131313;
+  color: #eeeeee;
+
+  padding: 5px;
+  text-align: center;
+  width: fit-content;
+}
+
+button {
+  background-color: #131313;
+  color: #adadad;
+
+  border: none;
+
+  padding: 6px 16px;
+}
+
+button:hover,
+h1 {
+  color: #eeeeee;
+}
+
+button,
+h1 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
 }

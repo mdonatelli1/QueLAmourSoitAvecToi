@@ -1,0 +1,22 @@
+#date {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    background-image: url("../assets/background2.png");
+    background-size: cover;
+}
+
+#question p.container {
+    margin: 1rem auto;
+}
+
+#reponse button {
+    margin: 0 8px;
+}
