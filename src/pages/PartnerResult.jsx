@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 
 import Char from '../components/Char.jsx'
-import charList from '../data';
 import Date from './Date.jsx';
 
 import '../App.css'
