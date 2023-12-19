@@ -1,4 +1,4 @@
-#welcome {
+#date {
     position: absolute;
 
     height: 100%;
@@ -11,4 +11,12 @@
 
     background-image: url("../assets/background2.png");
     background-size: cover;
+}
+
+#question p.container {
+    margin: 1rem auto;
+}
+
+#reponse button {
+    margin: 0 8px;
 }
