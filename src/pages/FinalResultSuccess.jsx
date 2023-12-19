@@ -11,7 +11,6 @@ function FinalResultSuccess ({end, partner}) {
         setRestart(true);
     }
 
-
   return (
     <>
       {restart ? (

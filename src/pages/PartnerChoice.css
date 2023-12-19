@@ -1,0 +1,49 @@
+#partner-choice {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+
+    background-image: url("../assets/background2.png");
+    background-size: cover;
+
+}
+
+.quests {
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.answer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    cursor: pointer;
+    gap: 25px;
+}
+
+.answer-next {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    padding-inline: 40px;
+}
+
+.button-next {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    cursor: pointer;
+}
+

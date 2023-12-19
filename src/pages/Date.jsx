@@ -23,8 +23,8 @@ function Date ({partner}) {
 					<p className='container'>{partner.questions[lvl].question}</p>
 				</div>
 				<div id='reponse'>
-					<Answer answer={partner.questions[lvl].answerBad} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} />
-					<Answer answer={partner.questions[lvl].answerGood} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} />
+					<Answer answer={partner.questions[lvl].answerBad} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
+					<Answer answer={partner.questions[lvl].answerGood} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
 				</div>
 			</section>
 		)
