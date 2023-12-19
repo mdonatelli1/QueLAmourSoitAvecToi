@@ -32,25 +32,25 @@ import charList from '../data.js'
       {
         question: 'As-tu une préférence pour sa couleur des yeux ?',
         options: [
-          { class: 'option1', text: 'Bleu' },
-          { class: 'option2', text: 'Rouge' },
-          { class: 'option3', text: 'bluesilver' },
+          { class: 'option1', text: 'Blue' },
+          { class: 'option2', text: 'Brown' },
+          { class: 'option3', text: 'Red' },
         ],
       },
       {
         question: 'Et pour sa taille ?',
         options: [
-          { class: 'option1', text: '3' },
-          { class: 'option2', text: '4' },
-          { class: 'option3', text: '5' },
+          { class: 'option1', text: '2.03' },
+          { class: 'option2', text: '1.5' },
+          { class: 'option3', text: '1.09' },
         ],
       },
       {
-        question: '2 + 2 ?',
+        question: 'De quelle monde tu veux que il vienne ?',
         options: [
-          { class: 'option1', text: '3' },
-          { class: 'option2', text: '4' },
-          { class: 'option3', text: '5' },
+          { class: 'option1', text: 'Tatooine' },
+          { class: 'option2', text: 'Alderaan' },
+          { class: 'option3', text: 'Naboo' },
         ],
       },
     ];
@@ -104,28 +104,30 @@ import charList from '../data.js'
         <MysteryChar />
         <div>
           <div>
-            <h2>{questionsData[currentQuestion].question}</h2>
-            <ul>
+            <h2 className="quests">{questionsData[currentQuestion].question}</h2>
+            <ul className="answer">
               {questionsData[currentQuestion].options.map((option, index) => (
-                <li key={option.id}>
+                <li key={option.class} className="answer-next">
                   <label>
                     <input
                       type="radio"
-                      value={option.id}
-                      checked={selectedOption === option.id}
-                      onChange={() => handleOptionSelect(option.id)}
+                      value={option.class}
+                      checked={selectedOption === option.class}
+                      onChange={() => handleOptionSelect(option.class)}
                     />
                     {option.text}
                   </label>
                 </li>
               ))}
             </ul>
-            <button onClick={handlePrevious} disabled={currentQuestion === 0}>
-              Précédent
-            </button>
-            <button onClick={handleNext} disabled={selectedOption === null}>
-              Suivant
-            </button>
+              <div className="button-next">
+                <button className="next" onClick={handlePrevious} disabled={currentQuestion === 0}>
+                  Précédent
+                </button>
+                <button className="next" onClick={handleNext} disabled={selectedOption === null}>
+                  Suivant
+                </button>
+              </div>
           </div>
         </div>
       </section>
