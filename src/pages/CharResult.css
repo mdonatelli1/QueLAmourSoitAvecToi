@@ -9,6 +9,5 @@
     align-items: center;
     justify-content: space-evenly;
 
-    background-image: url("../assets/background2.png");
-    background-size: cover;
+    backdrop-filter: blur(10px);
 }

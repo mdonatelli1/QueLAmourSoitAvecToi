@@ -23,7 +23,7 @@ function CharResult ( {selectedChar}) {
         :
         (<section id="char-result">
             <Char char={charList[selectedChar]}/>
-            <button onClick={handleClick}>Suivant</button>
+            <button className="btn" onClick={handleClick}>Suivant</button>
         </section>)
         }
         </>

@@ -6,7 +6,7 @@ import CharResult from './CharResult.jsx';
 
 import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
 
-
+import '../App.css'
 import "./CharChoice.css"
 
 function CharChoice() {

@@ -81,8 +81,8 @@ const charList = [
     ],
   },
   {
-    name: "Princess Leia",
-    imageSRC: "src/assets/princess-leia.png",
+    name: "Princesse Leia",
+    imageSRC: "src/assets/princesse-leia.png",
     datePlace: "src/assets/leia-date.png",
     id: 6,
     questions: [

@@ -3,14 +3,23 @@
 
     height: 100%;
     width: 100%;
+
+    background-position: center;
+    background-size: cover;
+}
+
+#blur {
+    position: absolute;
+
+    height: 100%;
+    width: 100%;
     
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
 
-    background-image: url("../assets/background2.png");
-    background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 #question .profile {
@@ -19,6 +28,8 @@
 
 #question p.container {
     margin: 1rem auto;
+    width: max-content;
+    max-width: 60ch;
 }
 
 #reponse {
@@ -27,4 +38,6 @@
 
 #reponse button {
     margin: 1rem 8px;
+    font-size: 1.25rem;
+    max-width: 60ch;
 }

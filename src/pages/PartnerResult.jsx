@@ -13,7 +13,7 @@ function PartnerResult ({char, partner}) {
     useEffect(() => {
         setTimeout(() => {
             setActive(true);
-        }, 5000)
+        }, 3000)
     }, [])
 
     return (

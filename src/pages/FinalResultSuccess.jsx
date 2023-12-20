@@ -17,22 +17,20 @@ function FinalResultSuccess ({end, partner}) {
       {restart ? (
         <Welcome />
       ) : (
-        <main>
+        <main style={{backgroundImage: `url(${partner.datePlace})`}}>
           <section id='final_result'>
             {end ? (
-              <>
+              <div className="result">
                 <h2 id='final_result_h2' className='final_result_h2'>Lovely !</h2>
-                <p id='final_result_paragraph'>Vous avez réussi, GG WP</p>
-                <img className='final_result_img' src={partner.imageSRC} alt='Success'/>
-                <button onClick={handleClick}>Restart</button>
-              </>
+                <img className='final_result_img' src="src\assets\win.png" alt='Success'/>
+                <button className="btn" onClick={handleClick}>Restart</button>
+              </div>
             ) : (
-              <>
+              <div className="result">
                 <h2 id='final_result_h2' className='final_result_h2'>Fail</h2>
-                <p id='final_result_paragraph'>Vous avez perdu</p>
-                <img className='final_result_img' src={partner.imageSRC} alt='Failure'/>
-                <button onClick={handleClick}>Restart</button>
-              </>
+                <img className='final_result_img' src="src\assets\lose.png" alt='Failure'/>
+                <button className="btn" onClick={handleClick}>Restart</button>
+              </div>
             )}
           </section>
         </main>

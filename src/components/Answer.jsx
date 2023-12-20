@@ -1,3 +1,5 @@
+import '../App.css'
+
 function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	const handleClick = () => {
 		answer === partner.questions[lvl].answerGood && setPoints(points + 1);
@@ -5,7 +7,7 @@ function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	}
 
 	return (
-		<button onClick={handleClick}>{answer}</button>
+		<button className="btn" onClick={handleClick}>{answer}</button>
 	)
 }
 

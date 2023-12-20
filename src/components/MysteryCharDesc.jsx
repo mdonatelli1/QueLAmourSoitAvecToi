@@ -1,3 +1,4 @@
+import '../App.css'
 import "./MysteryCharDesc.css"
 
 function MysteryCharDesc({ charDesc, handleClick }) {

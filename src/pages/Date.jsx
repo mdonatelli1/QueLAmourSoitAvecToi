@@ -17,14 +17,16 @@ function Date ({partner}) {
 		{(lvl === 3) ? (
 			<FinalResultSuccess end={points >= 2 ? true : false} partner={partner}/>
 		) : (
-			<section id="date">
-				<div id='question'>
-					<Char char={partner} />
-					<p className='container'>{partner.questions[lvl].question}</p>
-				</div>
-				<div id='reponse'>
-					<Answer answer={partner.questions[lvl].answerBad} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
-					<Answer answer={partner.questions[lvl].answerGood} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
+			<section id="date" style={{backgroundImage: `url(${partner.datePlace})`}}>
+				<div id='blur'>
+					<div id='question'>
+						<Char char={partner} />
+						<p className='container'>{partner.questions[lvl].question}</p>
+					</div>
+					<div id='reponse'>
+						<Answer answer={partner.questions[lvl].answerBad} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
+						<Answer answer={partner.questions[lvl].answerGood} points={points} setPoints={setPoints} lvl={lvl} setLvl={setLvl} partner={partner}/>
+					</div>
 				</div>
 			</section>
 		)
