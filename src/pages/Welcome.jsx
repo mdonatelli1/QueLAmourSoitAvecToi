@@ -19,7 +19,7 @@ function Welcome () {
         ) : (
             <section id='welcome'>
                 <h1>Que l'amour soit avec toi</h1>
-                <button onClick={handleClick}>Start</button>
+                <button className="btn" onClick={handleClick}>Start</button>
             </section>
         )
         }

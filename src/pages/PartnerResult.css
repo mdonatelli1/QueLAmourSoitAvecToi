@@ -9,8 +9,7 @@
     align-items: center;
     justify-content: center;
 
-    background-image: url("../assets/background1.png");
-    background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 #match {
@@ -22,4 +21,17 @@
     height: 128px;
     width: 128px;
     margin: 0 56px;
+
+    animation-name: beat;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes beat {
+    from {
+        transform: scale(1.2);
+    }
+    to {
+        transform: scale(0.8);
+    }
 }

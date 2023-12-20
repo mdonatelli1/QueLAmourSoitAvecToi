@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import charList from '../data.js'
+
 import Char from '../components/Char.jsx';
+import charList from '../data.js'
 import PartnerChoice from "./PartnerChoice.jsx"
+
 import '../App.css'
 import './CharResult.css'
 
@@ -21,7 +23,7 @@ function CharResult ( {selectedChar}) {
         :
         (<section id="char-result">
             <Char char={charList[selectedChar]}/>
-            <button onClick={handleClick}>Suivant</button>
+            <button className="btn" onClick={handleClick}>Suivant</button>
         </section>)
         }
         </>

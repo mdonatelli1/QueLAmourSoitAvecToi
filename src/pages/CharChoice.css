@@ -2,15 +2,13 @@
   position: absolute;
   height: 100%;
   width: 100%;
-  background-image: url("../assets/background2.png");
-  background-size: cover;
-}
 
-.char-choice h1 {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  color: black;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .mystery-char-wrapper {
@@ -19,7 +17,6 @@
 }
 
 .char-choice-container {
-  margin: 4rem;
   display: flex;
   align-items: center;
   gap: 3rem;

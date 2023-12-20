@@ -1,9 +1,11 @@
-import '../App.css';
-import MysteryChar from '../components/MysteryChar.jsx';
 import { useState, useEffect } from 'react';
-import './PartnerChoice.css';
-import PartnerResult from './PartnerResult.jsx';
+
+import Char from '../components/Char.jsx';
 import charList from '../data.js'
+import PartnerResult from './PartnerResult.jsx';
+
+import '../App.css';
+import './PartnerChoice.css';
 
   function PartnerChoice ({char}) {
     const[partner, setPartner] = useState(undefined);
@@ -22,7 +24,7 @@ import charList from '../data.js'
 
     const questionsData = [
       {
-        question: 'Quel genre veux-tu que ton date soit ?',
+        question: "Que recherches-tu ?",
         options: [
           { class: 'option1', text: 'Homme' },
           { class: 'option2', text: 'Femme' },
@@ -30,23 +32,23 @@ import charList from '../data.js'
         ],
       },
       {
-        question: 'As-tu une préférence pour sa couleur des yeux ?',
+        question: "As-tu une préférence pour la couleur de ses yeux ?",
         options: [
-          { class: 'option1', text: 'Blue' },
-          { class: 'option2', text: 'Brown' },
-          { class: 'option3', text: 'Red' },
+          { class: 'option1', text: 'Bleu' },
+          { class: 'option2', text: 'Brun' },
+          { class: 'option3', text: 'Rouge' },
         ],
       },
       {
-        question: 'Et pour sa taille ?',
+        question: "Et pour sa taille ?",
         options: [
-          { class: 'option1', text: '2.03' },
-          { class: 'option2', text: '1.5' },
-          { class: 'option3', text: '1.09' },
+          { class: 'option1', text: '2m03' },
+          { class: 'option2', text: '1m50' },
+          { class: 'option3', text: '1m09' },
         ],
       },
       {
-        question: 'De quelle monde tu veux que il vienne ?',
+        question: "De quel monde veux-tu qu'il vienne ?",
         options: [
           { class: 'option1', text: 'Tatooine' },
           { class: 'option2', text: 'Alderaan' },
@@ -95,40 +97,37 @@ import charList from '../data.js'
       setCurrentQuestion(currentQuestion - 1);
       setSelectedOption(null);
     };
-    
 
     return (
       <>
       {currentQuestion <= questionsData.length - 1 ? (
       <section id='partner-choice'>
-        <MysteryChar />
-        <div>
-          <div>
-            <h2 className="quests">{questionsData[currentQuestion].question}</h2>
-            <ul className="answer">
-              {questionsData[currentQuestion].options.map((option, index) => (
-                <li key={option.class} className="answer-next">
-                  <label>
-                    <input
-                      type="radio"
-                      value={option.class}
-                      checked={selectedOption === option.class}
-                      onChange={() => handleOptionSelect(option.class)}
-                    />
-                    {option.text}
-                  </label>
-                </li>
-              ))}
-            </ul>
-              <div className="button-next">
-                <button className="next" onClick={handlePrevious} disabled={currentQuestion === 0}>
-                  Précédent
-                </button>
-                <button className="next" onClick={handleNext} disabled={selectedOption === null}>
-                  Suivant
-                </button>
-              </div>
-          </div>
+        <Char char={charList[6]} />
+        <div className='partner-form'>
+          <h2 className="quests">{questionsData[currentQuestion].question}</h2>
+          <ul className="answer">
+            {questionsData[currentQuestion].options.map((option, index) => (
+              <li key={option.class} className="answer-next">
+                <label>
+                  <input
+                    type="radio"
+                    value={option.class}
+                    checked={selectedOption === option.class}
+                    onChange={() => handleOptionSelect(option.class)}
+                  />
+                  {option.text}
+                </label>
+              </li>
+            ))}
+          </ul>
+            <div className="button-next">
+              <button className="next btn" onClick={handlePrevious} disabled={currentQuestion === 0}>
+                Précédent
+              </button>
+              <button className="next btn" onClick={handleNext} disabled={selectedOption === null}>
+                Suivant
+              </button>
+            </div>
         </div>
       </section>
         ) : (

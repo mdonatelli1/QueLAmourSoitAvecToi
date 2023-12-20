@@ -1,4 +1,4 @@
-import CharList from '../data.js'
+import '../App.css'
 
 function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	const handleClick = () => {
@@ -7,7 +7,7 @@ function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	}
 
 	return (
-		<button onClick={handleClick}>{answer}</button>
+		<button className="btn" onClick={handleClick}>{answer}</button>
 	)
 }
 
