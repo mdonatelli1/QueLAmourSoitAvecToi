@@ -1,9 +1,10 @@
-import '../App.css';
-import MysteryChar from '../components/MysteryChar.jsx';
 import { useState, useEffect } from 'react';
-import './PartnerChoice.css';
-import PartnerResult from './PartnerResult.jsx';
+
 import charList from '../data.js'
+import PartnerResult from './PartnerResult.jsx';
+
+import '../App.css';
+import './PartnerChoice.css';
 
   function PartnerChoice ({char}) {
     const[partner, setPartner] = useState(undefined);
@@ -95,13 +96,12 @@ import charList from '../data.js'
       setCurrentQuestion(currentQuestion - 1);
       setSelectedOption(null);
     };
-    
 
     return (
       <>
       {currentQuestion <= questionsData.length - 1 ? (
       <section id='partner-choice'>
-        <MysteryChar />
+        <Char char={charList[6]} />
         <div>
           <div>
             <h2 className="quests">{questionsData[currentQuestion].question}</h2>

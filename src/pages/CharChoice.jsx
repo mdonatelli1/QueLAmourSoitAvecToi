@@ -1,8 +1,11 @@
 import { useState } from 'react';
-import charList from '../data.js'
-import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
+
 import Char from "../components/Char";
+import charList from '../data.js'
 import CharResult from './CharResult.jsx';
+
+import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
+
 
 import "./CharChoice.css"
 

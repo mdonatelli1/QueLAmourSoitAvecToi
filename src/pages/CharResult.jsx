@@ -1,7 +1,9 @@
 import { useState } from 'react';
-import charList from '../data.js'
+
 import Char from '../components/Char.jsx';
+import charList from '../data.js'
 import PartnerChoice from "./PartnerChoice.jsx"
+
 import '../App.css'
 import './CharResult.css'
 

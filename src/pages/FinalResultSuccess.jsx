@@ -1,8 +1,9 @@
-import '../App.css'
-import './final_result.css'
-import Welcome from './Welcome.jsx';
 import { useState } from "react";
 
+import Welcome from './Welcome.jsx';
+
+import '../App.css'
+import './final_result.css'
 
 function FinalResultSuccess ({end, partner}) {
   const [restart, setRestart] = useState(false);
