@@ -1,20 +1,21 @@
 import { useState } from 'react';
 
 import Char from "../components/Char";
-import charList from '../data.js'
+import charList from '../data.js';
 import CharResult from './CharResult.jsx';
 
 import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
 
-import '../App.css'
-import "./CharChoice.css"
+import '../App.css';
+import "./CharChoice.css";
+
+import mysteryIMG from "./../assets/mystere.png"
 
 function CharChoice() {
     const [selectedChar, setSelectedChar] = useState(undefined);
 
     const handleClick = (index) => {
         setSelectedChar(index);
-        console.log(index);
     };
 
     return (
@@ -23,7 +24,7 @@ function CharChoice() {
         (<div className="char-choice">
         <h1>Sélectionne ton personnage</h1>
         <div className="mystery-char-wrapper">
-            <Char char={charList[6]}/>
+            <Char char={charList[6]} img={mysteryIMG}/>
         </div>
         <div className="char-choice-container">
                 {charList.map((char, index) => (
@@ -37,3 +38,4 @@ function CharChoice() {
   };
 
   export default CharChoice;
+  

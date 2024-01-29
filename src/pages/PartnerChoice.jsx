@@ -1,14 +1,20 @@
 import { useState, useEffect } from 'react';
 
 import Char from '../components/Char.jsx';
-import charList from '../data.js'
+import charList from '../data.js';
 import PartnerResult from './PartnerResult.jsx';
 
 import '../App.css';
 import './PartnerChoice.css';
 
-  function PartnerChoice ({char}) {
+import darkVadorIMG from "./../assets/dark-vador.png";
+import r2d2IMG from "./../assets/r2d2.png";
+import princesseLeiaIMG from "./../assets/princesse-leia.png";
+import mysteryIMG from "./../assets/mystere.png"
+
+  function PartnerChoice ({char, charImg}) {
     const[partner, setPartner] = useState(undefined);
+    const[partnerImg, setPartnerImg] = useState(undefined);
     const[charactersInfos, setApiData] = useState([]);
     useEffect(() => {
     fetch("https://miadil.github.io/starwars-api/api/all.json")
@@ -65,12 +71,16 @@ import './PartnerChoice.css';
       setCurrentQuestion(currentQuestion + 1);
       if (currentQuestion === questionsData.length - 1){
         if (pointsOption1 > pointsOption2 && pointsOption1 > pointsOption3) {
+          setPartnerImg(darkVadorIMG);
           setPartner(charList[3]);
         } else if (pointsOption2 > pointsOption1 && pointsOption2 > pointsOption3) {
+          setPartnerImg(princesseLeiaIMG);
           setPartner(charList[5]);
         } else if (pointsOption3 > pointsOption1 && pointsOption3 > pointsOption2) {
+          setPartnerImg(r2d2IMG);
           setPartner(charList[4]);
         } else {
+          setPartnerImg(mysteryIMG);
           setPartner(charList[6]);
         }
       }
@@ -102,7 +112,7 @@ import './PartnerChoice.css';
       <>
       {currentQuestion <= questionsData.length - 1 ? (
       <section id='partner-choice'>
-        <Char char={charList[6]} />
+        <Char char={charList[6]} img={charImg} />
         <div className='partner-form'>
           <h2 className="quests">{questionsData[currentQuestion].question}</h2>
           <ul className="answer">
@@ -131,7 +141,7 @@ import './PartnerChoice.css';
         </div>
       </section>
         ) : (
-          <PartnerResult partner={partner} char={char}/>
+          <PartnerResult partner={partner} partnerImg={partnerImg} char={char} charImg={charImg} />
         )}
       </>
     );

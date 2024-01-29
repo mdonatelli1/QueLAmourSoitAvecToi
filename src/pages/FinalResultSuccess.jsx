@@ -2,8 +2,11 @@ import { useState } from "react";
 
 import Welcome from './Welcome.jsx';
 
-import '../App.css'
-import './final_result.css'
+import '../App.css';
+import './final_result.css';
+
+import win from "./../assets/win.png";
+import lose from "./../assets/lose.png";
 
 function FinalResultSuccess ({end, partner}) {
   const [restart, setRestart] = useState(false);
@@ -22,13 +25,13 @@ function FinalResultSuccess ({end, partner}) {
             {end ? (
               <div className="result">
                 <h2 id='final_result_h2' className='final_result_h2'>Lovely !</h2>
-                <img className='final_result_img' src="src\assets\win.png" alt='Success'/>
+                <img className='final_result_img' src={win} alt='Success'/>
                 <button className="btn" onClick={handleClick}>Restart</button>
               </div>
             ) : (
               <div className="result">
                 <h2 id='final_result_h2' className='final_result_h2'>Fail</h2>
-                <img className='final_result_img' src="src\assets\lose.png" alt='Failure'/>
+                <img className='final_result_img' src={lose} alt='Failure'/>
                 <button className="btn" onClick={handleClick}>Restart</button>
               </div>
             )}

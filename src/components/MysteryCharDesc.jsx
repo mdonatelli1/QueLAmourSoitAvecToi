@@ -1,5 +1,5 @@
-import '../App.css'
-import "./MysteryCharDesc.css"
+import '../App.css';
+import "./MysteryCharDesc.css";
 
 function MysteryCharDesc({ charDesc, handleClick }) {
     return (

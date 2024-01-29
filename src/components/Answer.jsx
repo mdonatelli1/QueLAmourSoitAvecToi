@@ -1,4 +1,4 @@
-import '../App.css'
+import '../App.css';
 
 function Answer ({answer, points, setPoints, lvl, setLvl, partner}) {
 	const handleClick = () => {

@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import CharChoice from './CharChoice.jsx';
 
-import '../App.css'
-import './Welcome.css'
+import '../App.css';
+import './Welcome.css';
 
 function Welcome () {
     const [active, setActive] = useState(false);
