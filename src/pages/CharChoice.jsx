@@ -9,8 +9,6 @@ import MysteryCharDesc from '../components/MysteryCharDesc.jsx';
 import '../App.css';
 import "./CharChoice.css";
 
-import mysteryIMG from "./../assets/mystere.png"
-
 function CharChoice() {
     const [selectedChar, setSelectedChar] = useState(undefined);
 
@@ -24,7 +22,7 @@ function CharChoice() {
         (<div className="char-choice">
         <h1>Sélectionne ton personnage</h1>
         <div className="mystery-char-wrapper">
-            <Char char={charList[6]} img={mysteryIMG}/>
+            <Char char={charList[6]} />
         </div>
         <div className="char-choice-container">
                 {charList.map((char, index) => (

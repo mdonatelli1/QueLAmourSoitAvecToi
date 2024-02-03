@@ -8,7 +8,7 @@ import FinalResultSuccess from '../pages/FinalResultSuccess.jsx';
 import './Date.css';
 import '../App.css';
 
-function Date ({partner, partnerImg}) {
+function Date ({partner}) {
   const [lvl, setLvl] = useState(0);
   const [points, setPoints] = useState(0);
 
@@ -20,7 +20,7 @@ function Date ({partner, partnerImg}) {
 			<section id="date" style={{backgroundImage: `url(${partner.datePlace})`}}>
 				<div id='blur'>
 					<div id='question'>
-						<Char char={partner} img={partnerImg} />
+						<Char char={partner} />
 						<p className='container'>{partner.questions[lvl].question}</p>
 					</div>
 					<div id='reponse'>
